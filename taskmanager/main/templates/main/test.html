@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block title %}
+Тестирование
+{% endblock %}
+{% block content %}
+
+
+        <div class="row">
+    <div class="col-md-8 col-sm-12">
+        <div class="article-list">
+
+    {% if article %}
+        {% for i in article %}
+
+            <div class="article">
+            <h2 class="article-title">
+                <a href="{{i.get_absolute_url}}">{{ i.title }}</a>
+            </h2>
+            <p class="artical-summary" >{{ i.summary}}</p>
+
+            </div>
+
+
+
+
+
+        {% endfor %}
+    {% endif %}
+</div>
+    </div>
+            </div>
+
+
+
+{% endblock %}
